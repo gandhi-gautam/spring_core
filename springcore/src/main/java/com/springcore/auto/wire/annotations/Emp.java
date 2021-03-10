@@ -1,0 +1,30 @@
+package com.springcore.auto.wire.annotations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class Emp {
+	@Autowired
+	@Qualifier("address1")
+	private Address address;
+
+	public Emp(Address addr) {
+		super();
+		address = addr;
+		// TODO Auto-generated constructor stub
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "Emp [address=" + address + "]";
+	}
+
+}
